@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         filter.addAction(Intent.ACTION_POWER_CONNECTED);
         filter.addAction(Intent.ACTION_POWER_DISCONNECTED);
 
-
         this.registerReceiver(mReceiver, filter);
 
 
@@ -38,8 +37,6 @@ public class MainActivity extends AppCompatActivity {
         LocalBroadcastManager.getInstance(this)
                 .sendBroadcast(customBroadcastIntent);
     }
-
-
     @Override
     protected void onDestroy() {
         // Unregister the receivers.
